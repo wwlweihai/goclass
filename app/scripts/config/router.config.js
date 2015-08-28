@@ -5,9 +5,9 @@ angular.module('app.config')
 .config([
         '$stateProvider',
         '$urlRouterProvider',
-        config
+        routeConfig
 ]);
-function config($stateProvider, $urlRouterProvider) {
+function routeConfig($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('index');
     $stateProvider
     .state('index', {
