@@ -8,8 +8,6 @@ angular.module('app.config')
         config
 ]);
 function config($ionicConfigProvider,RestangularProvider) {
-    //
-    RestangularProvider.setBaseUrl('https://leancloud.cn/1.1');
 
     //样式强制设置
     $ionicConfigProvider.views.transition('platform');
