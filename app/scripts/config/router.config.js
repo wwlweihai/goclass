@@ -15,5 +15,24 @@ function routeConfig($stateProvider, $urlRouterProvider) {
         templateUrl: "modules/index/index.html",
         controller:'index'
     })
+    .state('lifestyle', {
+        url: "/lifestyle",
+        templateUrl: "modules/lifestyle/lifestyle.html",
+        controller:'lifestyle'
+    })
+    .state('swimming', {
+        url: "/swimming",
+        templateUrl: "modules/swimming/swimming.html",
+        controller:'swimming'
+    })
+    .state('search', {
+        url: "/search",
+        templateUrl: "modules/search/search.html",
+        controller:'search'
+    })
+    .state('detail', {
+        url: "/detail",
+        templateUrl: "modules/detail/detail.html"
+    })
     ;
 };
