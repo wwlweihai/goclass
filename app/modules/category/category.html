@@ -1,14 +1,14 @@
-<ion-view view-title="LIFESTYLE">
+<ion-view view-title="subCategory">
     <ion-nav-buttons side="right" >
         <button class="button button-icon icon ion-ios-search" >
         </button>
     </ion-nav-buttons>
     <ion-nav-buttons side="left" >
-        <button class="button button-icon icon ion-university" >
+        <button class="button button-icon icon ion-university" ui-sref="menu.index">
         </button>
     </ion-nav-buttons>
-    <ion-content class="view-body has-header lifestyle-body">
-        <div class="class-list">
+    <ion-content class="view-body has-header category-body">
+        <div class="class-list grey-bg">
             <div class="row">
                 <div class="col col-20 text-center">
                     <div class="class-item-avatar">
@@ -54,7 +54,7 @@
         </div>
         <div class="subject-list">
             <div class="row row-wrap" ng-repeat="case in [1,2,3]">
-                <div class="col col-33 text-center">
+                <div class="col col-33 text-center" ui-sref="menu.subCategory">
                     <div class="subject-item-avatar">
                         <img src="images/Icon-1.png" />
                     </div>
@@ -62,7 +62,7 @@
                         SubCategory1
                     </div>
                 </div>
-                <div class="col col-33 text-center">
+                <div class="col col-33 text-center" ui-sref="menu.subCategory">
                     <div class="subject-item-avatar">
                         <img src="images/Icon-2.png" />
                     </div>
@@ -70,7 +70,7 @@
                         SubCategory1
                     </div>
                 </div>
-                <div class="col col-33 text-center">
+                <div class="col col-33 text-center" ui-sref="menu.subCategory">
                     <div class="subject-item-avatar">
                         <img src="images/Icon-3.png" />
                     </div>

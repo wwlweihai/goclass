@@ -1,0 +1,38 @@
+<ion-side-menus enable-menu-with-back-views="false" ng-controller="index">
+    <ion-side-menu-content>
+        <ion-nav-bar class="header-bar">
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-navicon button-balanced" menu-toggle="right">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="right" >
+        <ion-header-bar class="bar-stable text-center">
+            <div class="text-center" style="width: 100%;line-height: 34px;">
+                LANGUAGE
+            </div>
+        </ion-header-bar>
+        <ion-content class="menu-body has-header">
+            <div class="padding lg-set-box">
+                <div class="lg-item row row-center" menu-close>
+                    <div class="col col-33 item-img">
+                        <img src="images/us-flag.png" alt=""/>
+                    </div>
+                    <div class="col col-67 text-center">
+                        English
+                    </div>
+                </div>
+                <div class="lg-item row row-center" menu-close>
+                    <div class="col col-33 item-img">
+                        <img src="images/cn-flag.png" alt=""/>
+                    </div>
+                    <div class="col col-67 text-center">
+                        中文
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

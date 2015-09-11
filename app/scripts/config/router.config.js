@@ -8,31 +8,56 @@ angular.module('app.config')
         routeConfig
 ]);
 function routeConfig($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('index');
+    $urlRouterProvider.otherwise('menu/index');
     $stateProvider
-    .state('index', {
-        url: "/index",
-        templateUrl: "modules/index/index.html",
-        controller:'index'
+    .state('menu', {
+        url: "/menu",
+        abstract: true,
+        templateUrl: "modules/menu.html"
     })
-    .state('lifestyle', {
-        url: "/lifestyle",
-        templateUrl: "modules/lifestyle/lifestyle.html",
-        controller:'lifestyle'
+    .state('menu.index', {
+        url: '/index',
+        views: {
+            'menuContent': {
+                templateUrl: 'modules/index/index.html',
+                controller:'index'
+            }
+        }
     })
-    .state('swimming', {
-        url: "/swimming",
-        templateUrl: "modules/swimming/swimming.html",
-        controller:'swimming'
+    .state('menu.category', {
+        url: '/category',
+        views: {
+            'menuContent': {
+                templateUrl: 'modules/category/category.html',
+                controller:'category'
+            }
+        }
     })
-    .state('search', {
-        url: "/search",
-        templateUrl: "modules/search/search.html",
-        controller:'search'
+    .state('menu.subCategory', {
+        url: '/subCategory',
+        views: {
+            'menuContent': {
+                templateUrl: 'modules/subCategory/subCategory.html',
+                controller:'subCategory'
+            }
+        }
     })
-    .state('detail', {
-        url: "/detail",
-        templateUrl: "modules/detail/detail.html"
+    .state('menu.search', {
+        url: '/search',
+        views: {
+            'menuContent': {
+                templateUrl: 'modules/search/search.html',
+                controller:'search'
+            }
+        }
+    })
+    .state('menu.teacher', {
+        url: '/teacher',
+        views: {
+            'menuContent': {
+                templateUrl: 'modules/teacher/teacher.html'
+            }
+        }
     })
     ;
 };

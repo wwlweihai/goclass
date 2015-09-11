@@ -4,11 +4,11 @@
         </button>
     </ion-nav-buttons>
     <ion-nav-buttons side="left" >
-        <button class="button button-icon icon ion-university" >
+        <button class="button button-icon icon ion-university" ui-sref="menu.index">
         </button>
     </ion-nav-buttons>
-    <ion-content class="view-body has-header swimming-body">
-        <div class="subject-list">
+    <ion-content class="view-body has-header subCategory-body">
+        <div class="subject-list grey-bg">
             <div class="row">
                 <div class="col col-25 text-center subject-item">
                     <div class="subject-item-avatar">
@@ -34,7 +34,7 @@
                         SubCategory2
                     </div>
                 </div>
-                <div class="col col-25 text-center subject-item">
+                <div class="col col-25 text-center subject-item" ng-click="moreSubCate($event);">
                     <div class="subject-item-avatar">
                         <img src="images/more.png" />
                     </div>
@@ -44,18 +44,20 @@
             </div>
         </div>
         <div class="school-list">
-            <div class="school-item row row-top" ng-repeat="case in [1,2,3,4]">
-                <div class="col-20">
-                    <div class="school-item-avatar">
-                        <img src="images/cls.png" alt=""/>
+            <div class="school-item " ng-repeat="case in [1,2,3,4]">
+                <div class="row row-top" ui-sref="menu.teacher">
+                    <div class="col-20">
+                        <div class="school-item-avatar">
+                            <img src="images/cls.png" alt=""/>
+                        </div>
                     </div>
-                </div>
-                <div class="col col-80">
-                    <div class="scholl-item-name">
-                        AAS school
-                    </div>
-                    <div>
-                        评价
+                    <div class="col col-80">
+                        <div class="scholl-item-name">
+                            AAS school
+                        </div>
+                        <div>
+                            Teacher A
+                        </div>
                     </div>
                 </div>
             </div>

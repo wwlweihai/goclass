@@ -6,12 +6,12 @@
         <title>goclass</title>
         <link rel="shortcut icon" href="/favicon.ico">
         <!-- build:css(.) styles/modules.css -->
-        <link rel="stylesheet" href="bower_components/ionic/css/ionic.css">
+        <link rel="stylesheet" href="/bower_components/ionic/release/css/ionic.css">
         <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css">
-        <link rel="stylesheet" href="/bower_components/ionic-rating/ionic-rating.css">
+        <link rel="stylesheet" href="bower_components/ionic-rating/ionic-rating.css">
         <!-- endbuild -->
         <!-- build:js(.) scripts/vendor.js -->
-        <script src="bower_components/ionic/js/ionic.bundle.js"></script>
+        <script src="bower_components/ionic/release/js/ionic.bundle.js"></script>
         <script src="bower_components/lodash/lodash.js"></script>
         <script src="bower_components/restangular/dist/restangular.js"></script>
         <script src="bower_components/ionic-rating/ionic-rating.js"></script>
@@ -21,10 +21,10 @@
         <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/common.css">
         <link rel="stylesheet" href="modules/index/index.css">
-        <link rel="stylesheet" href="modules/lifestyle/lifestyle.css">
-        <link rel="stylesheet" href="modules/swimming/swimming.css">
+        <link rel="stylesheet" href="modules/category/category.css">
+        <link rel="stylesheet" href="modules/subCategory/subCategory.css">
         <link rel="stylesheet" href="modules/search/search.css">
-        <link rel="stylesheet" href="modules/detail/detail.css">
+        <link rel="stylesheet" href="modules/teacher/teacher.css">
         <!-- endbuild -->
         <!-- build:js scripts/main.js -->
         <script src="scripts/app.js"></script>
@@ -32,16 +32,44 @@
         <script src="scripts/config/router.config.js"></script>
 
         <script src="modules/index/index.controller.js"></script>
-        <script src="modules/lifestyle/lifestyle.controller.js"></script>
-        <script src="modules/swimming/swimming.controller.js"></script>
+        <script src="modules/category/category.controller.js"></script>
+        <script src="modules/subCategory/subCategory.controller.js"></script>
         <script src="modules/search/search.controller.js"></script>
         <!-- endbuild -->
     </head>
     <body>
-        <ion-nav-bar class="header-bar" align-title="center">
-            <ion-nav-back-button class="button-clear">
-            </ion-nav-back-button>
-        </ion-nav-bar>
+        <!--<ion-nav-bar class="header-bar" align-title="center">-->
+            <!--<ion-nav-back-button class="button-clear">-->
+            <!--</ion-nav-back-button>-->
+        <!--</ion-nav-bar>-->
         <ion-nav-view animation="slide-left-right"></ion-nav-view>
+        <script id="moreSubCate.html" type="text/ng-template">
+            <ion-popover-view>
+                <ion-content>
+                    <div class="moreSubCate-box">
+                        <div class="row row-center" ng-repeat="category in [1,2,3,4]" ng-click="closeMoreSubCatePopover();">
+                            <div class="col col-33 subCategory-avatar">
+                                <img src="images/Icon-1.png" alt=""/>
+                            </div>
+                            <div class="col col-67">
+                                subCatrgory2
+                            </div>
+                        </div>
+
+                    </div>
+
+                </ion-content>
+            </ion-popover-view>
+        </script>
+        <script id="lgSetPopover.html" type="text/ng-template">
+            <ion-popover-view style="height: 170px;">
+                <ion-header-bar class="padding stable-bg">
+                    <h1 class="title">LANGUAGE</h1>
+                </ion-header-bar>
+                <ion-content>
+
+                </ion-content>
+            </ion-popover-view>
+        </script>
     </body>
 </html>

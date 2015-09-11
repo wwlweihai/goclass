@@ -18,7 +18,7 @@ module.exports = function (grunt) {
     // Configurable paths
     var config = {
         app: 'app',
-        dist: 'dist'
+        dist: 'www'
     };
 
     // Define the configuration for all the tasks
@@ -326,7 +326,7 @@ module.exports = function (grunt) {
                 }, {
                     expand: true,
                     dot: true,
-                    cwd: 'bower_components/ionic',
+                    cwd: 'bower_components/ionic/release',
                     src: 'fonts/*.*',
                     dest: '<%= config.dist %>'
                 },  {
